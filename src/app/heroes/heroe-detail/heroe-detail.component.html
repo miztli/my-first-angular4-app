@@ -1,0 +1,17 @@
+<div *ngIf="hero">
+	<h2>Selected hero details:</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{hero.id}}</td>
+					<td><input [(ngModel)]="hero.name" placeholder="name"></td>
+				</tr>
+			</tbody>
+		</table>
+</div>

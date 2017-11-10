@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { HeroService } from './heroes/hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/message.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersService } from './users.service';
 
 
 @NgModule({
@@ -21,14 +24,16 @@ import { AppRoutingModule } from './/app-routing.module';
     BookComponent,
     HeroesComponent,
     HeroeDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [HeroService, MessageService],
+  providers: [HeroService, MessageService, UsersService],
   bootstrap: [
   	AppComponent
   ]

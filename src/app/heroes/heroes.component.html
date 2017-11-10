@@ -10,11 +10,25 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let h of heroes" (click)="onSelect(h)">
+		<tr *ngFor="let h of heroes" routerLink="/heroe-detail/{{h.id}}">
 			<td>{{h.id}}</td>
 			<td>{{h.name}}</td>
 		</tr>
 	</tbody>
 </table>
-<app-heroe-detail [hero]="selectedHero"></app-heroe-detail>
-
+<!-- <app-heroe-detail [hero]="selectedHero"></app-heroe-detail> -->
+<!--Users API REST call -->
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<td>{{user.id}}</td>
+			<td>{{user.name}}</td>
+		</tr>
+	</tbody>
+</table>
